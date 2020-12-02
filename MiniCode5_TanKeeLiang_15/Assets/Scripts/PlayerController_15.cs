@@ -84,7 +84,7 @@ public class PlayerController_15 : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("MinusEnergy"))
         {
-            energyCount -= 5;
+            energyCount -= 25;
             Destroy(collision.gameObject);
         }
     }

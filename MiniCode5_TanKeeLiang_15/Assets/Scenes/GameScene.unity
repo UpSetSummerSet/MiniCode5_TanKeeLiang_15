@@ -301,8 +301,8 @@ MonoBehaviour:
     type: 3}
   TimerCounter: {fileID: 977322091}
   PlayerCon: {fileID: 905746882}
-  numberOfSpawn: 50
-  levelTime: 3
+  numberOfSpawn: 25
+  levelTime: 60
 --- !u!4 &584428750
 Transform:
   m_ObjectHideFlags: 0
