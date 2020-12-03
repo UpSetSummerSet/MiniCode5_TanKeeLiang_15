@@ -10,6 +10,9 @@ public class PlayerController_15 : MonoBehaviour
     float energyCount = 0;
     public int AECollected = 1;
 
+    float zLimit = 24.72f;
+    float xLimit = 24.4f;
+
     public Animator playerAnim;
     public GameObject ECounter;
     public GameObject GameManager1;
@@ -71,6 +74,23 @@ public class PlayerController_15 : MonoBehaviour
         else if (GameManager1.GetComponent<GameManager>().levelTime == 0 || energyCount < 0)
         {
             SceneManager.LoadScene("LoseScene");
+        }
+
+        if (transform.position.z < -zLimit)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -zLimit);
+        }
+        else if (transform.position.z > zLimit)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zLimit);
+        }
+        if (transform.position.x < -xLimit)
+        {
+            transform.position = new Vector3(-xLimit, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x > xLimit)
+        {
+            transform.position = new Vector3(xLimit, transform.position.y, transform.position.z);
         }
     }
 
